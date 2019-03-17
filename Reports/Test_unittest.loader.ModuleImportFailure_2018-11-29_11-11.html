@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Result</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Test Result</h2>
+                
+                    <p class='attribute'>
+                        <strong>Start Time:</strong>
+                        
+                            2018-11-29 11:11:18
+                        
+                    </p>
+                
+                    <p class='attribute'>
+                        <strong>Duration:</strong>
+                        
+                            0:00:00
+                        
+                    </p>
+                
+                    <p class='attribute'>
+                        <strong>Status:</strong>
+                         
+                            Error: 1
+                        
+                    </p>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>unittest.loader.ModuleImportFailure</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr class='warning'>
+                                <td class="col-xs-9">test_login (unittest.loader.ModuleImportFailure)</td>
+                                <td class="col-xs-3">
+                                    <span class="label label-warning">
+                                        
+                                            Error
+                                        
+                                    </span>
+                                    
+                                        &nbsp<button class="btn btn-default btn-xs">View</button>
+                                    
+                                </td>
+                            </tr>
+                            
+                                <tr style="display:none;">
+                                    <td class="col-xs-9">
+                                        <p>ImportError</p>
+                                        <p>Failed to import test module: test_login
+Traceback (most recent call last):
+  File "C:\Python27\lib\unittest\loader.py", line 254, in _find_tests
+    module = self._get_module_from_name(name)
+  File "C:\Python27\lib\unittest\loader.py", line 232, in _get_module_from_name
+    __import__(name)
+  File "D:\1roman\autoTest\eptTest\test_case\test_login.py", line 1
+SyntaxError: Non-ASCII character '\xe7' in file D:\1roman\autoTest\eptTest\test_case\test_login.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+</p>
+                                    </td> 
+                                </tr>
+                            
+                        
+                        <tr>
+                            <td>
+                               Total Test Runned: 1
+                            </td>
+                            <td class="row">
+                                
+                                    <span class="col-xs-3">Error: 1</span>
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html>
