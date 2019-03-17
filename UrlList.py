@@ -97,7 +97,7 @@ ru_url = [
     ]
 doc_adr = 'd:\1roman\autotest\head1\text'
 
-a=['1','2','3','4']
+a=['1','2','3','4','4']
 print(a)
 b="".join(a)
 print(b)
